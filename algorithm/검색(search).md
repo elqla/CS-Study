@@ -1,0 +1,112 @@
+# 검색(search)
+
+### 순차검색(sequential search)
+
+- O(n)
+
+- 정렬
+
+  - ```python
+    def sequentialSearch(a, n, key):
+        i = 0
+        while i < n and a[i]! = key:   #i인덱스 범위가 항상 먼저와야함. 
+            i = i+1					 #그렇지 않으면 a[n]값이 없기 때문에 indexerror  (i+1 = n)
+        if i < n and a[i] == key:
+            return i
+        else:
+            return -1
+    ```
+
+    ```python
+    a[i]!=key and i < n:
+        ===========n보다 i가 작기 때문에 a[n] 값을 가질 수 없어 indexerror
+    ```
+
+    
+
+- 비정렬
+
+  - ```python
+    def sequentialSearch(a, n, key):
+        i = 0
+        while i < n and a[i]! = key:
+            i = i+1
+        if i < n:
+            return i
+        else:
+            return -1
+    ```
+
+  - ```python
+    for i: 0-> 6
+        if a[i] = key
+        	return key
+    return -1
+    ```
+
+    
+
+### 이진검색(Binary Search)
+
+> 탐색 범위를 두 부분으로 분할하면서 찾는 방식
+
+​	처음부터 끝까지 돌면서 탐색하는 것보다 훨씬 빠른 장점을 지님
+
+```text
+* 시간복잡도
+전체 탐색 : O(N)
+이분 탐색 : O(logN)
+```
+
+
+
+`진행순서`
+
+- 우선 `정렬`을 해야 함
+- left와 right로 mid 값 설정
+- mid와 내가 구하고자 하는 값과 비교
+- 구할 값이 mid보다 높으면 : left = mid+1 구할 값이 mid보다 낮으면 : right = mid - 1
+- left > right가 될 때까지 계속 반복하기
+
+
+
+```python
+def binarysearch(a, N, Key):
+    start = 0  #변경가능
+    end = N-1
+    while start <= end:   #while 1: ?
+        middle = (start + end)//2
+        if a[middle] == key:
+            return True  #검색성공
+        elif a[middle] > key:
+            end = middle -1
+        else:
+            start = middle + 1
+    return False #검색실패시
+```
+
+- ex) key = 9, s+e = 10+12, 22//2=>10   end =10-1,,  start = 10, end = 9?   return false
+
+
+
+```python
+#재귀
+def binarysearch2(a, low, high, key):
+    if low>high:  #실패
+        return False
+    else:
+        middle == (low + high)//2
+        if key == a[middle] #성공
+        	return True
+        elif key < a[middle]:
+            return binarysearch2(a, low, middle-1, key)
+        elif a[middle] < key:
+            return binarysearch2(a, middle+1, high, key)
+```
+
+
+
+
+
+
+
