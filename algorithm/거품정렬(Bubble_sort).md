@@ -16,7 +16,7 @@
 ```python
 def bubblesort(A):
 	for i in range(1, len(A)):        #왼쪽 원소[0]과 비교할 원소의 idx
-    	if j in range(0, len(A)-1):   #왼쪽 원소의 idx
+    	for j in range(0, len(A)-1):   #왼쪽 원소의 idx
         	if A[j] > A[j+1]:  		  #왼쪽 원소가, 그 다음것보다 크면
             	A[j], A[j+1] = A[j+1], A[j] #두값의 위치 변경
 ```
