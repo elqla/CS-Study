@@ -31,7 +31,8 @@ def SelctionSort(a, N):
         for j in range(i+1, N):    #비교할값, i부터 해도 상관 x 자기자신이라서
             if a[minIdx] > a[j]:
                 minIdx = j
-        a[i], a[minIdx] = a[minIdx], a[i]
+        a[i], a[minIdx] = a[minIdx], a[i]  #if문보다 앞에 위치한 이유: 
+        								#for-if문에서 모든 구간을 다 돌고 나와야해서
 ```
 
 

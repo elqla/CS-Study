@@ -87,6 +87,19 @@ def binarysearch(a, N, Key):
 
 - ex) key = 9, s+e = 10+12, 22//2=>10   end =10-1,,  start = 10, end = 9?   return false
 
+```python
+def binarySearch(array, value, low, high):
+	if low > high:
+		return False
+	mid = (low+high) / 2
+	if array[mid] > value:
+		return binarySearch(array, value, low, mid-1)
+	elif array[mid] < value:
+		return binarySearch(array, value, mid+1, high)
+	else:
+		return mid
+```
+
 
 
 ```python
