@@ -1,7 +1,7 @@
 # CS-Study
 
-- [algorithm](algorithm)
-- [data-structure](data_structure)
-
-- [computer_architecture](computer_architecture)
+- [Algorithm](algorithm)
+- Computer Science
+  - [data-structure](data_structure)
+  - [computer_architecture](computer_architecture)
 
