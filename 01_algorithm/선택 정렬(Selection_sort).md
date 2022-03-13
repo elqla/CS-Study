@@ -53,6 +53,16 @@ def select(arr, k):
 
 
 
+수학적 귀납법과 선택정렬
+
+```python
+selectionoSort(A[], k): 배열 A[l...k]을 정렬한다.
+    if(l<n):
+        A[0...k-1] 중 가장 큰 수A[m]를 찾는다. (overhead)
+        A[m]<->A[k]
+        selectioniSort(A, k-1) (recursive call)
+```
+
 
 
 
