@@ -12,6 +12,10 @@ n에 대한 항만을 표시하며 계수는 생략한다.
 
 ![](https://images.velog.io/images/elqla/post/a945ed78-bf3e-41e6-b850-73b03338a04d/image.png)
 
+![image-20220323095640087](images/image-20220323095640087.png)
+
+
+
 
 
 참고자료

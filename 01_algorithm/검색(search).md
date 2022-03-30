@@ -74,7 +74,7 @@
 def binarysearch(a, N, Key):
     start = 0  #변경가능
     end = N-1
-    while start <= end:   #while 1: ?
+    while start <= end:   # 하나 남았을때도, 키 값이랑 비교를 해야해
         middle = (start + end)//2
         if a[middle] == key:
             return True  #검색성공
