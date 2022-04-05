@@ -48,6 +48,16 @@
 
 ### 이진검색(Binary Search)
 
+> 이진검색을 하기 위해선, 자료가 정렬된 상태여야 한다.
+>
+> x**3 = [0, 1, 2, 3, 4, ...1000000] [0, 1, 4, 9, ...]  #배열을 만들어서 사용 (log n)
+>
+> 탐색 범위를 두 부분으로 분할하면서 찾는 방식
+>
+>  처음부터 끝까지 돌면서 탐색하는 것보다 훨씬 빠른 장점을 지님
+>
+> 
+>
 > 탐색 범위를 두 부분으로 분할하면서 찾는 방식
 
 ​	처음부터 끝까지 돌면서 탐색하는 것보다 훨씬 빠른 장점을 지님
@@ -58,7 +68,7 @@
 이분 탐색 : O(logN)
 ```
 
-
+- 반복구조 추천 !
 
 `진행순서`
 
@@ -71,18 +81,18 @@
 
 
 ```python
-def binarysearch(a, N, Key):
+def binarysearch(a[], N, Key):
     start = 0  #변경가능
     end = N-1
     while start <= end:   # 하나 남았을때도, 키 값이랑 비교를 해야해
         middle = (start + end)//2
         if a[middle] == key:
-            return True  #검색성공
+            return True(middle)  #검색성공
         elif a[middle] > key:
             end = middle -1
         else:
             start = middle + 1
-    return False #검색실패시
+    return False(-1) #검색실패시
 ```
 
 - ex) key = 9, s+e = 10+12, 22//2=>10   end =10-1,,  start = 10, end = 9?   return false
